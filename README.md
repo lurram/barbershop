@@ -1,4 +1,4 @@
-<h1 align="center"> Embarque Certo </h1>
+<h1 align="center"> Barbershop </h1>
 
 <p align="center">
 Programa exclusivo e gratuito, desenvolvido por Lurram Santos. <br/>
