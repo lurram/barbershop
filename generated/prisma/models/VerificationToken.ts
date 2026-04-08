@@ -156,7 +156,7 @@ export type VerificationTokenGroupByOutputType = {
   _max: VerificationTokenMaxAggregateOutputType | null
 }
 
-type GetVerificationTokenGroupByPayload<
+export type GetVerificationTokenGroupByPayload<
   T extends VerificationTokenGroupByArgs,
 > = Prisma.PrismaPromise<
   Array<
@@ -1175,6 +1175,11 @@ export type VerificationTokenFindManyArgs<
    * Skip the first `n` VerificationTokens.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   *
+   * Filter by unique combinations of VerificationTokens.
+   */
   distinct?:
     | Prisma.VerificationTokenScalarFieldEnum
     | Prisma.VerificationTokenScalarFieldEnum[]

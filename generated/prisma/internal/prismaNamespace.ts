@@ -93,12 +93,12 @@ export type PrismaVersion = {
 }
 
 /**
- * Prisma Client JS version: 7.3.0
- * Query Engine version: 9d6ad21cbbceab97458517b147a6a09ff43aa735
+ * Prisma Client JS version: 7.7.0
+ * Query Engine version: 75cbdc1eb7150937890ad5465d861175c6624711
  */
 export const prismaVersion: PrismaVersion = {
-  client: '7.3.0',
-  engine: '9d6ad21cbbceab97458517b147a6a09ff43aa735',
+  client: '7.7.0',
+  engine: '75cbdc1eb7150937890ad5465d861175c6624711',
 }
 
 /**
@@ -208,17 +208,18 @@ export type XOR<T, U> = T extends object
 /**
  * Is T a Record?
  */
-type IsObject<T extends any> = T extends Array<any>
-  ? False
-  : T extends Date
+type IsObject<T extends any> =
+  T extends Array<any>
     ? False
-    : T extends Uint8Array
+    : T extends Date
       ? False
-      : T extends BigInt
+      : T extends Uint8Array
         ? False
-        : T extends object
-          ? True
-          : False
+        : T extends BigInt
+          ? False
+          : T extends object
+            ? True
+            : False
 
 /**
  * If it's T[], return T
@@ -363,10 +364,8 @@ export type GetScalarType<T, O> = O extends object
     }
   : never
 
-type FieldPaths<
-  T,
-  U = Omit<T, '_avg' | '_sum' | '_count' | '_min' | '_max'>,
-> = IsObject<T> extends True ? U : T
+type FieldPaths<T, U = Omit<T, '_avg' | '_sum' | '_count' | '_min' | '_max'>> =
+  IsObject<T> extends True ? U : T
 
 export type GetHavingFields<T> = {
   [K in keyof T]: Or<
@@ -1345,11 +1344,8 @@ export type GetLogType<T> = CheckIsLogLevel<
   T extends LogDefinition ? T['level'] : T
 >
 
-export type GetEvents<T extends any[]> = T extends Array<
-  LogLevel | LogDefinition
->
-  ? GetLogType<T[number]>
-  : never
+export type GetEvents<T extends any[]> =
+  T extends Array<LogLevel | LogDefinition> ? GetLogType<T[number]> : never
 
 export type QueryEvent = {
   timestamp: Date

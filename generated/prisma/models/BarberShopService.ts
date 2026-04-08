@@ -211,7 +211,7 @@ export type BarberShopServiceGroupByOutputType = {
   _max: BarberShopServiceMaxAggregateOutputType | null
 }
 
-type GetBarberShopServiceGroupByPayload<
+export type GetBarberShopServiceGroupByPayload<
   T extends BarberShopServiceGroupByArgs,
 > = Prisma.PrismaPromise<
   Array<
@@ -1821,6 +1821,11 @@ export type BarberShopServiceFindManyArgs<
    * Skip the first `n` BarberShopServices.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   *
+   * Filter by unique combinations of BarberShopServices.
+   */
   distinct?:
     | Prisma.BarberShopServiceScalarFieldEnum
     | Prisma.BarberShopServiceScalarFieldEnum[]

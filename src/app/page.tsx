@@ -74,6 +74,7 @@ const Home = async () => {
             alt="Agende nos melhores FWS Barber"
             fill
             className="object-contain rounded-xl"
+            loading="eager"
           />
         </div>
 
