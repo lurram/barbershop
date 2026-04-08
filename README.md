@@ -33,7 +33,7 @@ Aqui estão algumas capturas de tela da versão mobile do projeto, que é o foco
 <p align="center">
   <img src="./screenshots/Home.png" width="250" alt="Home Screen">
   <img src="./screenshots/Barbershop_Services.png" width="250" alt="Barbershop Services Screen">
-  <img src="./screenshots/Barbershop_Details.png" width="250" alt="Barbershop Details Screen">
+  <img src="./screenshots/Appointment_Details.png" width="250" alt="Appoinment Details Screen">
   <img src="./screenshots/Appointment.png" width="250" alt="Appointment Screen">
   <img src="./screenshots/Google_Login.png" width="250" alt="Google Login Screen">
 </p>
